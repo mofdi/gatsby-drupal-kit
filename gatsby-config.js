@@ -1,24 +1,22 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Drupal Kit',
-    author: 'Nick Lewis',
+    title: "Gatsby Drupal Kit",
+    author: "Nick Lewis",
     description: "Starting point for new Drupal 8 sites. Let's see how it goes",
-    siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/',
+    siteUrl: "https://gatsbyjs.github.io/gatsby-starter-blog/"
   },
   plugins: [
     {
       resolve: `gatsby-source-drupal`,
       options: {
-        baseUrl: `http://dev-drupal-gatsby.pantheonsite.io/`,
-        apiBase: `jsonapi`,
-      },
+        baseUrl: `https://dev-saint-gobain-fr.content.saint-gobain.io/`,
+        apiBase: `jsonapi`
+      }
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Open+Sans`
-        ]
+        fonts: [`Open+Sans`]
       }
     },
     {
@@ -26,38 +24,37 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-copy-linked-files',
+            resolve: "gatsby-remark-copy-linked-files",
             options: {
-              ignoreFileExtensions: [],
-            },
-
+              ignoreFileExtensions: []
+            }
           },
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
-            },
+              maxWidth: 590
+            }
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
+              wrapperStyle: `margin-bottom: 1.0725rem`
+            }
           },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
-        ],
-      },
+          "gatsby-remark-prismjs",
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-smartypants"
+        ]
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    'gatsby-image',
+    "gatsby-image",
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -68,8 +65,8 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/feed-icon.png`,
-      },
+        icon: `src/assets/feed-icon.png`
+      }
     },
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sass`,
@@ -83,8 +80,8 @@ module.exports = {
         // This is field under which it's accessible
         fieldName: "Drupal",
         // Url to query from
-        url: "http://dev-drupal-gatsby.pantheonsite.io/graphql",
-      },
-    },
-  ],
-}
+        url: "https://dev-saint-gobain-fr.content.saint-gobain.io/graphql"
+      }
+    }
+  ]
+};
